@@ -10,8 +10,6 @@ ADD . /app
 # execute everyone's favorite pip command, pip install -r
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
-# unblock port 80 for the Flask app to run on
-EXPOSE 80
-
 # execute the Flask app
-CMD ["python", "backend.py"]
+ENTRYPOINT ["python", "backend.py"]
+#CMD ["--ip ${ip}", "--port ${port}"]
