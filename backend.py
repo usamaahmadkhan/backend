@@ -24,7 +24,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Start Flask Server')
 
     parser.add_argument("-ip", default="0.0.0.0", help='IP to start server on')
-    parser.add_argument("-port", default=80, help='sum the integers (default: find the max)')
+    parser.add_argument("-port", default=8080, help='sum the integers (default: find the max)')
     args = parser.parse_args()
 
     app.run(args.ip, port=args.port, debug=True)
